@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cennest Technologies</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row" style="margin-bottom: 80px">
+            <div class="container-fluid">
+                <img src="resources/logo.jpg" class="float-left ;" />
+                <button type="button" class="btn btn-warning float-right w-25">Let's Chat</button>
+            </div>
+        </div>
+
+        <div class="row">
+
+
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <nav class="navbar navbar-expand-lg navbar-light sidebar">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                        <ul class="nav-pills flex-column mr-auto mt-2 mt-lg-0 header-navigation-links">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <h3>Offerings<span class="menuItem">…See how we can help you</span></h3>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <h3>Case Studies<span class="menuItem">…Look at how we have worked with clients</span></h3>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <h3>About Us <span class="menuItem">…A quick peek about us and how we think</span></h3>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <h3>Blogs<span class="menuItem">…Technical learnings & Management Musings</span></h3>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+                <p class="lead animated swing content" style="animation-iteration-count: infinite">We love technology. And we love the pace at which innovations happen around us. It was our endeavour to use
+                    these innovations to help people build their ideas.</p>
+
+                <div class="flash-wrap">
+                    <p class="display-4" id="flash-wrap-content" style="display:inline;">Compiling ...</p>
+                    <p class="lead" style="display:inline;" id="flash-wrap-subcontent">Your Software</p>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script>
+        $.fn.extend({
+            animateCss: function (animationName, callback) {
+                var animationEnd = (function (el) {
+                    var animations = {
+                        animation: 'animationend',
+                        OAnimation: 'oAnimationEnd',
+                        MozAnimation: 'mozAnimationEnd',
+                        WebkitAnimation: 'webkitAnimationEnd',
+                    };
+
+                    for (var t in animations) {
+                        if (el.style[t] !== undefined) {
+                            return animations[t];
+                        }
+                    }
+                })(document.createElement('div'));
+
+                this.addClass('animated ' + animationName).one(animationEnd, function () {
+                    $(this).removeClass('animated ' + animationName);
+
+                    if (typeof callback === 'function') callback();
+                });
+
+                return this;
+            },
+        });
+
+
+
+        $(document).ready(function () {
+
+            $(".content").hide();
+
+            $('#flash-wrap-content').animateCss('flash', function () {
+
+
+                $('#flash-wrap-content').remove();
+                var buildingHTML = "<p class='display-4' id='flash-wrap-content' style='display: inline;'>Building ...</p>";
+
+                $("#flash-wrap-subcontent").before(buildingHTML);
+
+                $('#flash-wrap-content').animateCss('flash', function () {
+
+                    $('#flash-wrap-content').remove();
+                    var releasingHTML = "<p class='display-4 ' id='flash-wrap-content' style='display: inline;'>Releasing ...</p>";
+                    $("#flash-wrap-subcontent").before(releasingHTML);
+
+                    $('#flash-wrap-content').animateCss('flash', function () {
+
+                        $('.flash-wrap').remove();
+                        $(".content").show();
+
+                    });
+
+
+
+
+                });
+
+
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>
