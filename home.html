@@ -18,7 +18,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
- 
+
 </head>
 
 <body>
@@ -39,30 +39,38 @@
                 <nav class="navbar navbar-expand-lg navbar-light sidebar">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
                         aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
 
                         <ul class="nav-pills flex-column mr-auto mt-2 mt-lg-0 header-navigation-links">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <h3>Offerings<span class="menuItem">…See how we can help you</span></h3>
-                            
+                                    <h3>Offerings
+                                        <span class="menuItem">…See how we can help you</span>
+                                    </h3>
+
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <h3>Case Studies<span class="menuItem">…Look at how we have worked with clients</span></h3>
+                                    <h3>Case Studies
+                                        <span class="menuItem">…Look at how we have worked with clients</span>
+                                    </h3>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <h3>About Us <span class="menuItem">…A quick peek about us and how we think</span></h3>
+                                    <h3>About Us
+                                        <span class="menuItem">…A quick peek about us and how we think</span>
+                                    </h3>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <h3>Blogs<span class="menuItem">…Technical learnings & Management Musings</span></h3>
+                                    <h3>Blogs
+                                        <span class="menuItem">…Technical learnings & Management Musings</span>
+                                    </h3>
                                 </a>
                             </li>
                         </ul>
@@ -73,11 +81,11 @@
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-                <p class="lead animated swing content" style="animation-iteration-count: infinite">We love technology. And we love the pace at which innovations happen around us. It was our endeavour to use
+                <p class="lead animated pulse content" style="animation-iteration-count: infinite">We love technology. And we love the pace at which innovations happen around us. It was our endeavour to use
                     these innovations to help people build their ideas.</p>
 
                 <div class="flash-wrap">
-                    <p class="display-4" id="flash-wrap-content" style="display:inline;">Compiling ...</p>
+                    <p class="display-4" id="flash-wrap-content" style="display:inline;animation-duration:1500ms">Compiling ...</p>
                     <p class="lead" style="display:inline;" id="flash-wrap-subcontent">Your Software</p>
                 </div>
 
@@ -99,6 +107,10 @@
 
 
     <script>
+
+
+
+
         $.fn.extend({
             animateCss: function (animationName, callback) {
                 var animationEnd = (function (el) {
@@ -128,22 +140,28 @@
 
 
 
+
         $(document).ready(function () {
+
+
+
 
             $(".content").hide();
 
+
+         
+
             $('#flash-wrap-content').animateCss('flash', function () {
 
-
                 $('#flash-wrap-content').remove();
-                var buildingHTML = "<p class='display-4' id='flash-wrap-content' style='display: inline;'>Building ...</p>";
+                var buildingHTML = "<p class='display-4' id='flash-wrap-content' style='display: inline;animation-duration:1500ms'>Building ...</p>";
 
                 $("#flash-wrap-subcontent").before(buildingHTML);
 
                 $('#flash-wrap-content').animateCss('flash', function () {
 
                     $('#flash-wrap-content').remove();
-                    var releasingHTML = "<p class='display-4 ' id='flash-wrap-content' style='display: inline;'>Releasing ...</p>";
+                    var releasingHTML = "<p class='display-4 ' id='flash-wrap-content' style='display: inline;animation-duration:1500ms'>Releasing ...</p>";
                     $("#flash-wrap-subcontent").before(releasingHTML);
 
                     $('#flash-wrap-content').animateCss('flash', function () {
@@ -154,11 +172,7 @@
                     });
 
 
-
-
                 });
-
-
 
             });
 
