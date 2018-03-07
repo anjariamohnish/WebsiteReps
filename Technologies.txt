@@ -1,0 +1,6 @@
+  <b>Technologies :</b> We absolutely love JavaScript and the libraries built around it in the move
+                            towards everything Web and the Internet-of-Things. View our
+                            <a href="#" class="link">Playground </a>to see our experiments with JavaScript and its libraries. We work on Mobile solutions
+                            in the most widely used platforms- iOS & Android. And Cloud platforms like Azure and AWS to deliver
+                            solutions easily. We like the unified approach of Microsoft stack to help rapidly build solutions
+                            rather than focus on plumbing different frameworks.
