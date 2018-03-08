@@ -16,6 +16,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
 </head>
 
 <body>
@@ -64,7 +68,7 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12 hl d-none d-sm-block d-md-none" id="mobilesize">
                 <p class=" active-tab">Blogs
-                 <!--   <span class="lead">Sample of some recent work</span>-->
+                    <!--   <span class="lead">Sample of some recent work</span>-->
                 </p>
 
             </div>
@@ -73,15 +77,10 @@
             <div class="col-lg-10 col-md-12 col-sm-12 ">
 
                 <div class="row main-content">
-                    <div class="col-lg-5 border border-primary rounded-left rounded-right text-center">
-                        <h6>
-                            Technical Blogs
-                        </h6>
+                    <div class="col-lg-5 border border-primary rounded-left rounded-right " id="cennest-blogs">
 
-                        <p class="text-center">
-                            For Architects, Developers & Head-bangers
 
-                        </p>
+
 
                     </div>
 
@@ -132,9 +131,68 @@
 
 
 
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            YUI().use('yql', function (Y) {
+                var query = 'select * from rss(0,5) where url = "http://cennest.com/weblog/feed/"'
+                var q = Y.YQL(query, function (r) {
+                    //r now contains the result of the YQL Query as a JSON
+
+                    var feed = r.query.results.item // get feed as array of entries
+                    for (var i = 0; i < feed.length; i++) {
+                        $('#cennest-blogs').append("<div class='bg-light'><h4 class='text-left'> <a href='" + feed[i].link + "'> " + feed[i].title + " </a></h4>" +
+                            "<p class='lead text-justify'>" + feed[i].description + "</p>" +
+                            "<p>" + feed[i].pubDate + "</p>" +
+                            "</div><br/><br/>");
+
+                        /* console.log(feed[i].title);
+                         console.log(feed[i].description);
+                         console.log(feed[i].pubDate);
+                        */
+
+
+                    }
+
+                })
+            })
+
+
+        });
+      /*  $(document).ready(function () {
+            //feed to parse
+            var url = "download.xml";
+
+            $.ajax(url, {
+                accepts: {
+                    xml: "application/rss+xml"
+                },
+                dataType: "xml",
+                success: function (data) {
+                    //Credit: http://stackoverflow.com/questions/10943544/how-to-parse-an-rss-feed-using-javascript
+
+                    $(data).find("item").each(function () { // or "item" or whatever suits your feed
+                        var el = $(this);
+
+                        //  $('#cennest-blogs').append('<h6>' + el.find('title').text() + '</h6>');
 
 
 
+                        console.log("------------------------");
+                        console.log("title      : " + el.find("title").text());
+                        console.log("link       : " + el.find("link").text());
+                        console.log("description: " + el.find("description").text());
+                        console.log("Date: " + el.find("pubDate").text());
+                    });
+
+
+                }
+            });
+
+
+        });*/
+    </script>
 
 
 </body>

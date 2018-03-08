@@ -98,3 +98,11 @@ margin-right: -6px;
   padding: 3%;
 }
 
+#cennest-blogs{
+
+ 
+  overflow-y: scroll;
+
+  max-height: 250px;
+
+}

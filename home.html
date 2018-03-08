@@ -32,6 +32,9 @@
             </div>
         </div>
 
+    </div>
+    <div class="container-fluid">
+
         <div class="row">
 
 
@@ -81,8 +84,7 @@
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-                <p class="lead animated pulse content" style="animation-iteration-count: infinite">We love technology. And we love the pace at which innovations happen around us. It was our endeavour to use
-                    these innovations to help people build their ideas.</p>
+                <p class="lead animated pulse content" id="homecontent" style="animation-iteration-count: infinite"></p>
 
                 <div class="flash-wrap">
                     <p class="display-4" id="flash-wrap-content" style="display:inline;animation-duration:1500ms">Compiling ...</p>
@@ -107,6 +109,25 @@
 
 
     <script>
+
+
+
+        $(document).ready(function () {
+
+
+            GetFileContent("resources/homecontent.txt", "homecontent");
+
+
+
+            function GetFileContent(filename, id) {
+                $.get(filename, function (data) {
+                    $('#' + id).html(data);
+                });
+            }
+
+
+        });
+
 
 
 
@@ -149,7 +170,7 @@
             $(".content").hide();
 
 
-         
+
 
             $('#flash-wrap-content').animateCss('flash', function () {
 
