@@ -77,14 +77,14 @@
             <div class="col-lg-10 col-md-12 col-sm-12 ">
 
                 <div class="row main-content">
-                    <div class="col-lg-5 border border-primary rounded-left rounded-right " id="cennest-blogs">
+                    <div class="col-lg-6 border border-primary rounded-left rounded-right blog" id="cennest-blogs">
 
 
 
 
                     </div>
 
-                    <div class="col-lg-7 text-center">
+                    <div class="col-lg-6 text-center">
                         <h6>
                             A Messaging Platform for people to connect with their local businesses </h6>
 
@@ -95,17 +95,12 @@
 
                 </div>
                 <div class="row main-content">
-                    <div class="col-lg-5 border border-primary rounded-left rounded-right text-center">
-                        <h6> Musing</h6>
+                    <div class="col-lg-6 border border-primary rounded-left rounded-right text-center blog" id="musing-blogs">
 
-                        <p class="text-center">
-                            On Technology, Management & More
-
-                        </p>
 
                     </div>
 
-                    <div class="col-lg-7 text-center">
+                    <div class="col-lg-6 text-center">
                         <h6>
                             Building an Idea Map on the Fly </h6>
 
@@ -136,21 +131,89 @@
     <script>
         $(document).ready(function () {
             YUI().use('yql', function (Y) {
-                var query = 'select * from rss(0,5) where url = "http://cennest.com/weblog/feed/"'
+                var query = 'select * from rss(0,5) where url = "http://cennest.com/weblog/feed/" | sort(field="pubDate", descending="true")  '
                 var q = Y.YQL(query, function (r) {
                     //r now contains the result of the YQL Query as a JSON
 
                     var feed = r.query.results.item // get feed as array of entries
                     for (var i = 0; i < feed.length; i++) {
-                        $('#cennest-blogs').append("<div class='bg-light'><h4 class='text-left'> <a href='" + feed[i].link + "'> " + feed[i].title + " </a></h4>" +
-                            "<p class='lead text-justify'>" + feed[i].description + "</p>" +
-                            "<p>" + feed[i].pubDate + "</p>" +
-                            "</div><br/><br/>");
+
+
+                        var d = new Date(feed[i].pubDate);
+                        var dd = d.getDate();
+                        var mm = d.getMonth() + 1; //January is 0!
+                        var yyyy = d.getFullYear();
+                        var hour = d.getHours();
+                        var min = d.getMinutes();
+                        var period = 'AM';
+                        if (hour < 10) {
+                            hour = '0' + hour;
+                        }
+                        if (min < 10) {
+                            min = '0' + min;
+                        }
+
+                        if (hour > 12) {
+                            period = 'PM';
+                        }
+
+                        $('#cennest-blogs').append("<div ><h4 class='text-left'> <a href='" + feed[i].link + "'> " + feed[i].title + " </a></h4>" +
+                            "<p class='blog-content text-justify'>" + feed[i].description + "</p>" +
+                            "<p class='text-right'>" + dd + '/' + mm + '/' + yyyy + ' ' + hour + ':' + min + ' ' + period + "</p>" +
+                            "</div><hr/><br/>");
+
+
+
 
                         /* console.log(feed[i].title);
                          console.log(feed[i].description);
                          console.log(feed[i].pubDate);
                         */
+
+
+                    }
+
+                })
+            })
+
+
+            YUI().use('yql', function (Y) {
+                var query = 'select * from rss(0,5) where url = "https://medium.com/feed/dakshp" | sort(field="pubDate", descending="true")  '
+                var q = Y.YQL(query, function (r) {
+                    //r now contains the result of the YQL Query as a JSON
+
+                    var feed = r.query.results.item // get feed as array of entries
+                    for (var i = 0; i < feed.length; i++) {
+                        var d = new Date(feed[i].pubDate);
+                        var dd = d.getDate();
+                        var mm = d.getMonth() + 1; //January is 0!
+                        var yyyy = d.getFullYear();
+                        var hour = d.getHours();
+                        var min = d.getMinutes();
+                        var period = 'AM';
+                        if (hour < 10) {
+                            hour = '0' + hour;
+                        }
+                        if (min < 10) {
+                            min = '0' + min;
+                        }
+
+                        if (hour > 12) {
+                            period = 'PM';
+                        }
+
+
+                        $('#musing-blogs').append("<div ><h4 class='text-left'> <a href='" + feed[i].link + "'> " + feed[i].title + " </a></h4>" +
+                            "<p class='blog-content text-justify'>" + feed[i].encoded + "</p>" +
+                            "<p class='text-right'>" + dd + '/' + mm + '/' + yyyy + ' ' + hour + ':' + min + ' ' + period + "</p>" +
+                            "</div><hr/><br/>");
+
+
+
+                        /*console.log(feed[i].title);*/
+                        //   console.log(feed[i].encoded);
+                        /*  console.log(feed[i].pubDate);
+                         */
 
 
                     }
