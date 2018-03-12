@@ -2,14 +2,16 @@
   margin-bottom: 80px !important;
 }
 
+.nav-element{
+  color: #5b9bd5;
+}
 
 .menuItem{
   font-size:15px;
+  font-style: italic;
   font-weight: normal;
 }
-  ul.header-navigation-links {
-  list-style-type: none;
-}
+  
 .card-body{
   margin-left: 15px;
 }
@@ -107,24 +109,18 @@ margin-right: -6px;
   padding: 3%;
 }
 
-/*#cennest-blogs{
-  
-  overflow-y: scroll;
- 
-  max-height: 250px;
-
-}*/
-
-/*#musing-blogs{
-  overflow-y: scroll;
-  overflow-x: hidden;
-  max-height: 250px;
-
-}*/
 
 .blog-content p {
   font-size: 15px;
   margin-bottom: 6px;
   font-weight: 500;
+}
+
+
+.center-components {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
