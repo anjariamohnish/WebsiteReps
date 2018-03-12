@@ -5,8 +5,8 @@
     <title>Cennest Technologies</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="resources/style.css" />
+    <link rel="stylesheet" href="resources/animate.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -44,7 +44,7 @@
         <div class="row">
 
 
-            <div class="col-lg-2 col-md-12 col-sm-12 mh-100 vl d-sm-none d-md-block">
+            <div class="col-lg-2 col-md-12 col-sm-12 mh-100 vl d-sm-none d-xs-none d-md-block">
 
 
                 <div class="center-div">
@@ -66,7 +66,7 @@
 
             </div>
 
-            <div class="col-lg-12 col-md-12 col-sm-12 hl d-none d-sm-block d-md-none" id="mobilesize">
+            <div class="col-lg-12 col-md-12 col-sm-12 hl d-none d-sm-block d-xs-block d-md-none" id="mobilesize">
                 <p class=" active-tab">Blogs
                     <!--   <span class="lead">Sample of some recent work</span>-->
                 </p>
@@ -204,14 +204,14 @@
 
 
                         $('#musing-blogs').append("<div ><h4 class='text-left'> <a href='" + feed[i].link + "'> " + feed[i].title + " </a></h4>" +
-                            "<p class='blog-content text-justify'>" + feed[i].encoded + "</p>" +
+                            "<p class='blog-content text-justify' >" + feed[i].encoded + "</p>" +
                             "<p class='text-right'>" + dd + '/' + mm + '/' + yyyy + ' ' + hour + ':' + min + ' ' + period + "</p>" +
                             "</div><hr/><br/>");
 
 
 
                         /*console.log(feed[i].title);*/
-                        //   console.log(feed[i].encoded);
+                     //  console.log(feed[i].encoded);
                         /*  console.log(feed[i].pubDate);
                          */
 

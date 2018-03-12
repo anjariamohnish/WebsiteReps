@@ -126,3 +126,8 @@ margin-right: -6px;
   font-size: 18px;
   font-weight: 300;
 }
+
+#musing-blogs  img{
+height: 100px;
+width: 100px;
+}
