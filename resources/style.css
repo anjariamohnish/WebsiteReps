@@ -107,27 +107,24 @@ margin-right: -6px;
   padding: 3%;
 }
 
-#cennest-blogs{
+/*#cennest-blogs{
   
   overflow-y: scroll;
  
   max-height: 250px;
 
-}
+}*/
 
-#musing-blogs{
+/*#musing-blogs{
   overflow-y: scroll;
   overflow-x: hidden;
   max-height: 250px;
 
+}*/
+
+.blog-content p {
+  font-size: 15px;
+  margin-bottom: 6px;
+  font-weight: 500;
 }
 
-.blog-content{
-  font-size: 18px;
-  font-weight: 300;
-}
-
-#musing-blogs  img{
-height: 100px;
-width: 100px;
-}

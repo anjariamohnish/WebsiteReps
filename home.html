@@ -49,8 +49,9 @@
                         <ul class="nav-pills flex-column mr-auto mt-2 mt-lg-0 header-navigation-links">
                             <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <h3>Offerings
-                                        <span class="menuItem">…See how we can help you</span>
+                                    <h3>
+                                        <span onclick="location.href='offerings.html'">Offerings</span>
+                                        <span class="menuItem" onclick="location.href='offerings2.html'">…See how we can help you</span>
                                     </h3>
 
                                 </a>
@@ -70,7 +71,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="blogs.html">
                                     <h3>Blogs
                                         <span class="menuItem">…Technical learnings & Management Musings</span>
                                     </h3>
@@ -84,7 +85,9 @@
             </div>
 
             <div class="col-lg-6 col-md-12 col-sm-12 text-center">
-                <p class="lead animated pulse content" id="homecontent" style="animation-iteration-count: infinite"></p>
+                <div style="padding-top:10% ;padding-right: 1%">
+                    <p class="lead animated pulse content" id="homecontent" style="animation-iteration-count: infinite"></p>
+                </div>
 
                 <div class="flash-wrap">
                     <p class="display-4" id="flash-wrap-content" style="display:inline;animation-duration:1500ms">Compiling ...</p>
@@ -163,6 +166,7 @@
 
 
         $(document).ready(function () {
+
 
 
 
