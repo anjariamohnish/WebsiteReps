@@ -68,11 +68,13 @@
             </div>
 
             <div class="col-lg-12 col-md-12 col-sm-12 hl d-sm-block d-md-block d-lg-none d-xs" id="mobilesize">
-                <p class=" active-tab">Blogs
+                <p class=" active-tab" id="mobileTitle">
+
+                    Blogs
                     <!--   <span class="lead">Sample of some recent work</span>-->
                     <span>
-                        <img src="resources/left-arrow.png" id="backArrow" onclick="location.href = 'home.html';" style="margin-bottom: 5px;cursor: pointer;visibility: hidden"
-                            class="float-right" alt="backArrow" />
+                        <img src="resources/left-arrow.png" onclick="location.href = 'home.html';" style="margin-bottom: 5px;cursor: pointer;" class="float-right"
+                            alt="backArrow" />
                     </span>
                 </p>
 
@@ -144,7 +146,11 @@
     <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
 
     <script>
+
+
+
         $(document).ready(function () {
+
 
 
             $.fn.extend({
@@ -176,31 +182,49 @@
 
 
 
-            $(".nav2").css("visibility", "visible");
 
-            $('.nav2').animateCss('fadeInLeft', function () {
+            if ($(document).width() < 991) {
 
-                $(".line").css("visibility", "visible");
-
-
-                $('.line').animateCss('fadeInRight', function () {
-
-                    $(".vl").css("border-right", " 2px solid #17a2b8");
-
+                $('#mobileTitle').animateCss('zoomIn', function () {
                     $(".main-content").css("visibility", "visible");
+                    $(".main-content").animateCss('fadeIn');
 
-
-                    $(".main-content").animateCss('fadeIn', function () {
-
-                        $("#backArrow").css("visibility", "visible");
-                        $('#backArrow').animateCss('fadeInRight')
-                    });
+                    $(".nav2").css("visibility", "visible");
+                    $(".line").css("visibility", "visible");
+                    $(".vl").css("border-right", " 2px solid #17a2b8");
                 });
 
 
-            });
 
 
+
+            } else {
+
+                $(".nav2").css("visibility", "visible");
+
+                $('.nav2').animateCss('fadeInLeft', function () {
+
+                    $(".line").css("visibility", "visible");
+
+
+                    $('.line').animateCss('fadeInRight', function () {
+
+                        $(".vl").css("border-right", " 2px solid #17a2b8");
+
+                        $(".main-content").css("visibility", "visible");
+
+
+                        $(".main-content").animateCss('fadeIn', function () {
+
+                            $("#backArrow").css("visibility", "visible");
+                            $('#backArrow').animateCss('fadeInRight')
+                        });
+                    });
+
+
+                });
+
+            }
 
 
 
