@@ -36,7 +36,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 d-none d-sm-none d-md-none d-lg-block d-xl-block">
                 <img src="resources/left-arrow.png" onclick="location.href = 'home.html';" style="margin-bottom: 5px;cursor: pointer" class="float-right"
                     alt="backArrow" />
             </div>
@@ -46,9 +46,99 @@
 
 
             <div class="col-lg-4 col-md-12 col-sm-12 ">
-                <div id="accordion">
+
+
+                <div class=" d-md-block  d-lg-none d-xl-none">
+                    <nav class="navbar navbar-expand-lg  navbar-light   ">
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <div id="accordion" class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
+                                    <div class="card card-view card-nav">
+                                        <div class="card-header bg-white" id="headingOne">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-lg accordion-button lead accordion-title" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+
+                                                    Offerings
+
+                                                </button>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <p class="lead"> Services to build your software</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card card-view card-nav">
+                                        <div class="card-header  bg-white" id="headingTwo">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-lg collapsed accordion-button lead accordion-title" data-toggle="collapse" data-target="#collapseTwo"
+                                                    aria-expanded="false" aria-controls="collapseTwo">
+                                                    Case Studies
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <p class="lead"> Case Studies Goes Here</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card card-view card-nav">
+                                        <div class="card-header  bg-white" id="headingThree">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-lg collapsed accordion-button lead accordion-title" data-toggle="collapse" data-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree">
+                                                    About Us
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <p class="lead"> About Us Goes Here</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card card-view card-nav">
+                                        <div class="card-header  bg-white" id="headingFour">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-lg collapsed accordion-button lead accordion-title" data-toggle="collapse" data-target="#collapseFour"
+                                                    aria-expanded="false" aria-controls="collapseFour">
+                                                    Blogs
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                            <div class="card-body">
+                                                <p class="lead"> Blogs Goes Here</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </ul>
+
+                        </div>
+                    </nav>
+                </div>
+
+
+
+                <div id="accordion" class="d-none d-sm-none d-md-none d-lg-block d-xl-block">
                     <div class="card card-view card-nav">
-                        <div class="card-header bg-white"  id="headingOne">
+                        <div class="card-header bg-white" id="headingOne">
                             <h5 class="mb-0">
                                 <button class="btn btn-lg accordion-button lead accordion-title" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                                     aria-controls="collapseOne">
@@ -66,7 +156,7 @@
                         </div>
                     </div>
                     <div class="card card-view card-nav">
-                        <div class="card-header  bg-white"  id="headingTwo">
+                        <div class="card-header  bg-white" id="headingTwo">
                             <h5 class="mb-0">
                                 <button class="btn btn-lg collapsed accordion-button lead accordion-title" data-toggle="collapse" data-target="#collapseTwo"
                                     aria-expanded="false" aria-controls="collapseTwo">
@@ -81,7 +171,7 @@
                         </div>
                     </div>
                     <div class="card card-view card-nav">
-                        <div class="card-header  bg-white"  id="headingThree">
+                        <div class="card-header  bg-white" id="headingThree">
                             <h5 class="mb-0">
                                 <button class="btn btn-lg collapsed accordion-button lead accordion-title" data-toggle="collapse" data-target="#collapseThree"
                                     aria-expanded="false" aria-controls="collapseThree">
@@ -115,6 +205,19 @@
 
 
                 </div>
+
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 hl  d-sm-block d-md-block d-xs d-xl-none d-lg-none" style="margin-bottom: 5%">
+
+
+                <p class=" active-tab">Offerings
+                    <!-- <span class="lead">Services to build your software</span>-->
+                    <span>
+                        <img src="resources/left-arrow.png" onclick="location.href = 'home.html';" style="margin-bottom: 5px;cursor: pointer" class="float-right"
+                            alt="arow" />
+                    </span>
+                </p>
 
             </div>
 
@@ -155,15 +258,10 @@
 
             </div>
 
-
-
         </div>
 
-
-
-
-
     </div>
+
 
     <!--<script type="text/javascript" src="app.js" />-->
 
