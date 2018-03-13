@@ -78,7 +78,8 @@
 
 .link{
   color: orangered;
-  font-weight: bold;
+  font-weight: 650;
+  text-decoration: underline;
 }
 
 .line

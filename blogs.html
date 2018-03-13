@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-        <title>Cennest Technologies | Making Sense of Disruptive Technologies  </title>
+    <title>Cennest Technologies | Making Sense of Disruptive Technologies </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="resources/style.css" />
     <link rel="stylesheet" href="resources/animate.css">
-    <link rel="shortcut icon" type="image/png" href="resources/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="resources/favicon.ico" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -37,8 +37,8 @@
 
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 d-none d-sm-none d-md-none d-lg-block">
-                <img src="resources/left-arrow.png" onclick="location.href = 'home.html';" style="margin-bottom: 5px;cursor: pointer" class="float-right"
-                    alt="arow" />
+                <img src="resources/left-arrow.png" id="backArrow" onclick="location.href = 'home.html';" style="margin-bottom: 5px;cursor: pointer;visibility: hidden"
+                    class="float-right" alt="backArrow" />
             </div>
         </div>
 
@@ -71,8 +71,8 @@
                 <p class=" active-tab">Blogs
                     <!--   <span class="lead">Sample of some recent work</span>-->
                     <span>
-                        <img src="resources/left-arrow.png" onclick="location.href = 'home.html';" style="margin-bottom: 5px;cursor: pointer" class="float-right"
-                            alt="arow" />
+                        <img src="resources/left-arrow.png" id="backArrow" onclick="location.href = 'home.html';" style="margin-bottom: 5px;cursor: pointer;visibility: hidden"
+                            class="float-right" alt="backArrow" />
                     </span>
                 </p>
 
@@ -192,7 +192,8 @@
 
                     $(".main-content").animateCss('fadeIn', function () {
 
-
+                        $("#backArrow").css("visibility", "visible");
+                        $('#backArrow').animateCss('fadeInRight')
                     });
                 });
 
@@ -236,7 +237,7 @@
                                period = 'PM';
                            }*/
                         if (i < 5) {
-                            $('#cennest-blogs').append("<div class='blog-content'><p class='text-left'> <a href='" + feed[i].link + "'> " + feed[i].title + " </a></p></div>");
+                            $('#cennest-blogs').append("<div class='blog-content'><p class='text-left'> <a href='" + feed[i].link + "' target='_blank'> " + feed[i].title + " </a></p></div>");
                         }
 
 
@@ -282,7 +283,7 @@
                         */
 
                         if (i < 5) {
-                            $('#musing-blogs').append("<div class='blog-content'><p class='text-left'> <a href='" + feed[i].link + "'> " + feed[i].title + " </a></p> </div>");
+                            $('#musing-blogs').append("<div class='blog-content'><p class='text-left'> <a href='" + feed[i].link + "' target='_blank'> " + feed[i].title + " </a></p> </div>");
 
                         }
 
