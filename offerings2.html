@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Cennest Technologies</title>
+        <title>Cennest Technologies | Making Sense of Disruptive Technologies  </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="resources/style.css" />
     <link rel="stylesheet" href="resources/animate.css">
+    <link rel="shortcut icon" type="image/png" href="resources/favicon.ico"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -16,6 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -52,7 +54,7 @@
                         <div class="line"></div>
                     </div>
 
-                    <p class="lead">Services to build your software</p>
+                    <p class="lead nav2">Services to build your software</p>
 
 
                 </div>
@@ -143,7 +145,70 @@
             }
 
 
+
         });
+
+
+
+
+        $.fn.extend({
+            animateCss: function (animationName, callback) {
+                var animationEnd = (function (el) {
+                    var animations = {
+                        animation: 'animationend',
+                        OAnimation: 'oAnimationEnd',
+                        MozAnimation: 'mozAnimationEnd',
+                        WebkitAnimation: 'webkitAnimationEnd',
+                    };
+
+                    for (var t in animations) {
+                        if (el.style[t] !== undefined) {
+                            return animations[t];
+                        }
+                    }
+                })(document.createElement('div'));
+
+                this.addClass('animated ' + animationName).one(animationEnd, function () {
+                    $(this).removeClass('animated ' + animationName);
+
+                    if (typeof callback === 'function') callback();
+                });
+
+                return this;
+            },
+        });
+
+
+        $(document).ready(function () {
+
+
+            $(".nav2").css("visibility", "visible");
+
+            $('.nav2').animateCss('fadeInLeft', function () {
+
+                $(".line").css("visibility", "visible");
+
+
+                $('.line').animateCss('fadeInRight', function () {
+
+                    $(".vl").css("border-right", " 2px solid #17a2b8");
+
+                    $(".main-content").css("visibility", "visible");
+
+
+                    $(".main-content").animateCss('fadeIn', function () {
+
+
+                    });
+                });
+
+
+            });
+        });
+
+
+
+
 
 
     </script>
