@@ -126,14 +126,27 @@ margin-right: -6px;
 
 
 
-.card-nav.card-header{
-  padding-bottom: 0 !important; 
+.card-nav .card-header{
+  padding-bottom: 0 ; 
 } 
 
-.card-nav.card-header button{
-  padding-bottom: 0 !important;
+.card-nav .card-header button{
+  padding-bottom: 0 ;
 }
 
-.card-nav.collapse.card-body{
-  padding-top: 0 !important;
+.card-nav .collapse .card-body{
+  padding-top: 0 ;
+  padding-bottom: 0 ;
+}
+
+.card-nav .collapse .card-body .lead {
+  margin-bottom: 0;
+}
+
+.card-nav .card-header{
+  border: none;
+}
+
+.nav2{
+  margin-bottom: 0;
 }
