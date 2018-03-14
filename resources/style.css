@@ -140,7 +140,7 @@ margin-right: -6px;
 
 .card-nav .card-header button{
   padding-bottom: 0 ;
-  font-size: 24px !important;
+  font-size: 24px ;
 }
 
 .card-nav .collapse .card-body{
@@ -153,7 +153,7 @@ margin-right: -6px;
   font-style: italic;
   color: #6c757d!important;
   font-weight: 350!important;
-  font-size: 20px !important;
+  font-size: 20px ;
 }
 
 .card-nav .card-header{
@@ -191,3 +191,209 @@ color: #5b9bd5 ;
   width: 20% !important;
   background-color: #5b9bd5;
 }
+
+
+/* Media Queries*/
+
+
+@media (min-width: 325px) {  
+
+  .headerimg{
+  width: 30%;
+  margin-top: 8px;
+
+  }
+  #top-button{
+  width: auto !important;
+  }
+
+  /*Home.html*/
+  #homecontent{
+    font-size: 15px !important;
+  }
+  #flash-wrap-content{
+    font-size: 28px !important;
+  }
+  #flash-wrap-subcontent{
+    font-size: 18px !important;
+   }
+   #home-nav .nav-item .nav-link h3{
+    font-size: 18px !important;
+  }
+
+
+  /*offerings.html*/
+  #productmanagementprototyping{
+    font-size: 13px;
+  }
+
+  #DevelopmentWebMobileCloud{
+    font-size: 13px;
+  }
+  #Technologies{
+    font-size: 13px;
+  }
+
+  .card-nav .collapse .card-body .lead{
+    font-size: 14px;
+  }
+
+  .accordion-title{
+    font-size: 18px !important;
+  }
+
+
+}
+
+
+
+
+@media (min-width: 544px) {  
+
+    .headerimg{
+      width: 26%;
+    }
+    #top-button{
+      width: 20% !important;
+    }
+
+      /*Home.html*/
+  #homecontent{
+    font-size: 16px !important;
+  }
+  #flash-wrap-content{
+    font-size: 38px !important;
+  }
+  #flash-wrap-subcontent{
+    font-size: 20px !important;
+   }
+   #home-nav .nav-item .nav-link h3{
+    font-size: 20px !important;
+  }
+
+
+
+    /*offerings.html*/
+    #productmanagementprototyping{
+      font-size: 14px;
+    }
+  
+    #DevelopmentWebMobileCloud{
+      font-size: 14px;
+    }
+    #Technologies{
+      font-size: 14px;
+    }
+  
+    .card-nav .collapse .card-body .lead{
+      font-size: 14px;
+    }
+  
+    .accordion-title{
+      font-size: 18px !important;
+    }
+
+}
+ 
+
+
+
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+ 
+
+  .headerimg{
+    width: 26%;
+  }
+  #top-button{
+    width: 20% !important;
+  }
+  
+  /*Home.html*/
+   #homecontent{
+     font-size: 18px !important;
+   }
+  
+   #flash-wrap-content{
+    font-size: 48px !important;
+  }
+  #flash-wrap-subcontent{
+    font-size: 20px !important;
+   }
+
+   #home-nav .nav-item .nav-link h3{
+     font-size: 25px !important;
+   }
+
+
+     /*offerings.html*/
+  #productmanagementprototyping{
+    font-size: 15px;
+  }
+
+  #DevelopmentWebMobileCloud{
+    font-size: 15px;
+  }
+  #Technologies{
+    font-size: 15px;
+  }
+
+  .card-nav .collapse .card-body .lead{
+    font-size: 16px;
+  }
+
+  .accordion-title{
+    font-size: 20px !important;
+  }
+}
+ 
+
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+ 
+
+ /*Home.html*/
+ #homecontent{
+  font-size: 21px !important;
+  }
+
+  #flash-wrap-content{
+ font-size: 58px !important;
+  }
+  #flash-wrap-subcontent{
+ font-size: 30px !important;
+  }
+
+  #home-nav .nav-item .nav-link h3{
+  font-size: 30px !important;
+  }
+
+      /*offerings.html*/
+      #productmanagementprototyping{
+        font-size: 16px;
+      }
+    
+      #DevelopmentWebMobileCloud{
+        font-size: 16px;
+      }
+      #Technologies{
+        font-size: 16px;
+      }
+    
+      .card-nav .collapse .card-body .lead{
+        font-size: 20px;
+      }
+    
+      .accordion-title{
+        font-size: 25px !important;
+      }
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  
+}
+ 
