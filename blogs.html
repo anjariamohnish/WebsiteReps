@@ -29,7 +29,7 @@
 
         <div class="row" style="margin-bottom: 40px">
             <div class="container-fluid">
-                <img src="resources/logo.jpg" class="float-left ;" alt="logo" />
+                <img src="resources/logo.jpg" class="float-left headerimg" alt="logo" />
                 <button type="button" class="btn  float-right p-1" id="top-button" ><span style="color: white">Let's Chat</span></button>
 
             </div>
@@ -261,7 +261,7 @@
                                period = 'PM';
                            }*/
                         if (i < 5) {
-                            $('#cennest-blogs').append("<div class='blog-content'><p class='text-left'> <a href='" + feed[i].link + "' target='_blank'> " + feed[i].title + " </a></p></div>");
+                            $('#cennest-blogs').append("<div class='blog-content'><p class='text-left'> <a href='" + feed[i].link + "' target='_blank' id='blog-link'> " + feed[i].title + " </a></p></div>");
                         }
 
 

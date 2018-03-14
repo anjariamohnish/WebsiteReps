@@ -192,7 +192,7 @@ color: #5b9bd5 ;
   background-color: #5b9bd5;
 }
 
-
+/***********************************************/
 /* Media Queries*/
 
 
@@ -207,6 +207,9 @@ color: #5b9bd5 ;
   width: auto !important;
   }
 
+  #top-button2{
+    width: auto !important;
+  }
   /*Home.html*/
   #homecontent{
     font-size: 15px !important;
@@ -242,6 +245,9 @@ color: #5b9bd5 ;
     font-size: 18px !important;
   }
 
+  #blog-link {
+    font-size: 14px !important;
+  }
 
 }
 
@@ -257,6 +263,10 @@ color: #5b9bd5 ;
       width: 20% !important;
     }
 
+    
+  #top-button2{
+    width: 20% !important;
+  }
       /*Home.html*/
   #homecontent{
     font-size: 16px !important;
@@ -293,6 +303,9 @@ color: #5b9bd5 ;
       font-size: 18px !important;
     }
 
+    #blog-link {
+      font-size: 14px !important;
+    }
 }
  
 
@@ -309,7 +322,9 @@ color: #5b9bd5 ;
   #top-button{
     width: 20% !important;
   }
-  
+  #top-button2{
+    width: 20% !important;
+  }
   /*Home.html*/
    #homecontent{
      font-size: 18px !important;
@@ -346,6 +361,10 @@ color: #5b9bd5 ;
   .accordion-title{
     font-size: 20px !important;
   }
+
+  #blog-link {
+    font-size: 15px !important;
+  }
 }
  
 
@@ -354,6 +373,7 @@ color: #5b9bd5 ;
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
  
+  
 
  /*Home.html*/
  #homecontent{
@@ -386,14 +406,19 @@ color: #5b9bd5 ;
       .card-nav .collapse .card-body .lead{
         font-size: 20px;
       }
+      .card-nav .card-header button{
+        font-size: 23px !important;
+      }
     
       .accordion-title{
         font-size: 25px !important;
       }
+
+      #blog-link {
+        font-size: 15px !important;
+      }
 }
+
  
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-  
-}
+
  
