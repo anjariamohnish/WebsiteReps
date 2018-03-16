@@ -196,7 +196,7 @@ color: #5b9bd5 ;
 /* Media Queries*/
 
 
-@media (min-width: 325px) {  
+@media (min-width: 320px) {  
 
   .headerimg{
   width: 30%;
